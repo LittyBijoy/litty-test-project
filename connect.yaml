@@ -10,7 +10,7 @@ deployAs:
         - key: ENTRY_POINT_URI_PATH
           description: The Custom Application's entry point URI path
           required: true
-          default: my-app
+          default: litty_test_custom_app
         - key: CLOUD_IDENTIFIER
           description: The cloud identifier — must match the project's region
           required: true
