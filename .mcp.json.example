@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "commerce-mcp-litty": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@commercetools/commerce-mcp",
+        "--tools=read_products,read_categories,read_channels,read_customers,read_orders,read_carts,read_product_types,read_shipping_methods,read_project",
+        "--dynamicToolLoadingThreshold=650"
+      ],
+      "env": {
+        "PROJECT_KEY": "your-project-key",
+        "CLIENT_ID": "your-client-id",
+        "CLIENT_SECRET": "your-client-secret",
+        "AUTH_URL": "https://auth.<region>.commercetools.com",
+        "API_URL": "https://api.<region>.commercetools.com"
+      }
+    }
+  }
+}

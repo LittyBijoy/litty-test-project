@@ -1,0 +1,16 @@
+mutation UpdateCustomerNotes(
+  $id: String!
+  $version: Long!
+  $actions: [CustomerUpdateAction!]!
+) {
+  updateCustomer(id: $id, version: $version, actions: $actions) {
+    id
+    version
+    custom {
+      customFieldsRaw {
+        name
+        value
+      }
+    }
+  }
+}

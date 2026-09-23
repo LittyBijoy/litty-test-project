@@ -1,0 +1,32 @@
+query FetchCustomerByEmail($where: String!) {
+  customers(where: $where, limit: 1) {
+    total
+    results {
+      id
+      version
+      email
+      firstName
+      lastName
+      customerNumber
+      defaultShippingAddressId
+      defaultBillingAddressId
+      addresses {
+        id
+        firstName
+        lastName
+        streetName
+        streetNumber
+        city
+        postalCode
+        country
+        phone
+      }
+      custom {
+        customFieldsRaw {
+          name
+          value
+        }
+      }
+    }
+  }
+}

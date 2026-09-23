@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  typecheck-lint-build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: site
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: site/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npx tsc --noEmit
+
+      - name: Lint
+        run: npx eslint . --max-warnings=0
+
+      - name: Build
+        run: npm run build
+        env:
+          # Dummy values so the build's module graph resolves (no live API calls happen
+          # during `next build` — all storefront routes are server-rendered on demand).
+          CTP_PROJECT_KEY: ci-placeholder
+          CTP_AUTH_URL: https://auth.us-central1.gcp.commercetools.com
+          CTP_API_URL: https://api.us-central1.gcp.commercetools.com
+          CTP_CLIENT_ID: ci-placeholder
+          CTP_CLIENT_SECRET: ci-placeholder
+          CTP_SCOPES: view_products:ci-placeholder
+          SESSION_SECRET: ci-only-placeholder-32-characters!!
+          CTP_CHECKOUT_APP_KEY: ci-placeholder

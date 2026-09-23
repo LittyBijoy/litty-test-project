@@ -1,0 +1,14 @@
+{
+  "extends": "@commercetools-frontend/application-config/tsconfig-mc-app.json",
+  "compilerOptions": {
+    "typeRoots": ["@types", "@types-extensions", "node_modules/@types"],
+    // Allow tsc to resolve dependencies of `@types` packages in the way pnpm sets up the `node_modules`.
+    "preserveSymlinks": false,
+    // Some @commercetools-frontend/* published .d.ts files use relative cross-package imports
+    // that only resolve under pnpm's node_modules layout (this project uses npm, matching the
+    // rest of the repo). skipLibCheck only skips checking *library* .d.ts files — it has no
+    // effect on type-checking our own src/ code.
+    "skipLibCheck": true
+  },
+  "include": ["src"]
+}

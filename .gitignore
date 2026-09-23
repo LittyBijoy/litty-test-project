@@ -1,0 +1,24 @@
+# Local MCP server config — holds a commercetools API client secret for the
+# self-hosted Commerce MCP server. Never commit this; each developer keeps
+# their own local copy (see .mcp.json.example for the shape).
+.mcp.json
+
+# Claude Code local state — personal overrides, not shared config
+.claude/settings.local.json
+.claude/skills/
+.agents/skills/
+
+# OS/editor cruft
+.DS_Store
+Thumbs.db
+
+# Defense-in-depth (each app also has its own, more specific .gitignore)
+node_modules/
+.env
+.env.*
+!.env.example
+!*/.env
+.next/
+public/
+dist/
+.vercel/

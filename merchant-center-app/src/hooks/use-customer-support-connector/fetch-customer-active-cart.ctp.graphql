@@ -1,0 +1,28 @@
+query FetchCustomerActiveCart($where: String!) {
+  carts(where: $where, limit: 1) {
+    total
+    results {
+      id
+      totalLineItemQuantity
+      lastModifiedAt
+      totalPrice {
+        centAmount
+        currencyCode
+        fractionDigits
+      }
+      lineItems {
+        id
+        quantity
+        nameAllLocales {
+          locale
+          value
+        }
+        totalPrice {
+          centAmount
+          currencyCode
+          fractionDigits
+        }
+      }
+    }
+  }
+}

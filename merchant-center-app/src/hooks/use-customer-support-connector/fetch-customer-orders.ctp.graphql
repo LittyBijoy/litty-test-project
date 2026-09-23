@@ -1,0 +1,21 @@
+query FetchCustomerOrders(
+  $where: String!
+  $limit: Int!
+  $offset: Int!
+  $sort: [String!]
+) {
+  orders(where: $where, limit: $limit, offset: $offset, sort: $sort) {
+    total
+    results {
+      id
+      orderNumber
+      orderState
+      createdAt
+      totalPrice {
+        centAmount
+        currencyCode
+        fractionDigits
+      }
+    }
+  }
+}
