@@ -13,10 +13,9 @@ const config = {
     },
     production: {
       applicationId: 'cmudrdtao000e01zxzxelpowc',
-      // TODO(litty): replace with the real hosting URL once this app is deployed
-      // (Connect, Vercel, or Netlify — see the "going to production" doc), then
-      // update the URL on the registration in Merchant Center to match.
-      url: 'https://placeholder.example.com',
+      // Deployed via commercetools Connect (sandbox deployment, key: litty-mc-app-sandbox).
+      // Redeploy: `commercetools connect deployment redeploy --key litty-mc-app-sandbox`
+      url: 'https://mc-app-nh1u0dm9nkaswygcn7b01a3f.us-central1.gcp.3.sandbox.commercetools.app',
     },
   },
   oAuthScopes: {
