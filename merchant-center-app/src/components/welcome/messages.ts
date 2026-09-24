@@ -54,4 +54,13 @@ export default defineMessages({
     defaultMessage:
       'Look up a customer by email to see their profile, orders, and active cart, and leave an internal support note.',
   },
+  cardCustomObjectsTitle: {
+    id: 'Welcome.cardCustomObjectsTitle',
+    defaultMessage: 'Custom Objects',
+  },
+  cardCustomObjectsContent: {
+    id: 'Welcome.cardCustomObjectsContent',
+    defaultMessage:
+      'Browse, create, edit, and delete Custom Objects by container — arbitrary JSON data with no dedicated Merchant Center UI of its own.',
+  },
 });

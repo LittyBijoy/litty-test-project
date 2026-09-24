@@ -19,8 +19,17 @@ const config = {
     },
   },
   oAuthScopes: {
-    view: ['view_products', 'view_customers', 'view_orders'],
-    manage: ['manage_products', 'manage_customers'],
+    view: [
+      'view_products',
+      'view_customers',
+      'view_orders',
+      'view_key_value_documents',
+    ],
+    manage: [
+      'manage_products',
+      'manage_customers',
+      'manage_key_value_documents',
+    ],
   },
   icon: '${path:@commercetools-frontend/assets/application-icons/rocket.svg}',
   mainMenuLink: {
@@ -44,6 +53,12 @@ const config = {
     {
       uriPath: 'customer-support',
       defaultLabel: 'Customer Support',
+      labelAllLocales: [],
+      permissions: [PERMISSIONS.View],
+    },
+    {
+      uriPath: 'custom-objects',
+      defaultLabel: 'Custom Objects',
       labelAllLocales: [],
       permissions: [PERMISSIONS.View],
     },

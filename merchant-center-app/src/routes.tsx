@@ -3,6 +3,7 @@ import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import Spacings from '@commercetools-uikit/spacings';
 import Categories from './components/categories';
 import Channels from './components/channels';
+import CustomObjects from './components/custom-objects';
 import CustomerSupport from './components/customer-support';
 import Welcome from './components/welcome';
 
@@ -34,6 +35,9 @@ const ApplicationRoutes = (_props: ApplicationRoutesProps) => {
         </Route>
         <Route path={`${match.path}/customer-support`}>
           <CustomerSupport linkToWelcome={match.url} />
+        </Route>
+        <Route path={`${match.path}/custom-objects`}>
+          <CustomObjects linkToWelcome={match.url} />
         </Route>
         <Route>
           <Welcome />

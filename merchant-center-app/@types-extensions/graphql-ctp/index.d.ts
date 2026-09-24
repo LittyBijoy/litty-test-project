@@ -1,5 +1,37 @@
 /* THIS IS A GENERATED FILE */
 
+declare module '*/fetch-custom-objects.ctp.graphql' {
+  import { DocumentNode } from 'graphql';
+  const defaultDocument: DocumentNode;
+  export const FetchCustomObjects: DocumentNode;
+
+  export default defaultDocument;
+}
+
+declare module '*/fetch-custom-object.ctp.graphql' {
+  import { DocumentNode } from 'graphql';
+  const defaultDocument: DocumentNode;
+  export const FetchCustomObject: DocumentNode;
+
+  export default defaultDocument;
+}
+
+declare module '*/create-or-update-custom-object.ctp.graphql' {
+  import { DocumentNode } from 'graphql';
+  const defaultDocument: DocumentNode;
+  export const CreateOrUpdateCustomObject: DocumentNode;
+
+  export default defaultDocument;
+}
+
+declare module '*/delete-custom-object.ctp.graphql' {
+  import { DocumentNode } from 'graphql';
+  const defaultDocument: DocumentNode;
+  export const DeleteCustomObject: DocumentNode;
+
+  export default defaultDocument;
+}
+
 declare module '*/fetch-customer-by-email.ctp.graphql' {
   import { DocumentNode } from 'graphql';
   const defaultDocument: DocumentNode;

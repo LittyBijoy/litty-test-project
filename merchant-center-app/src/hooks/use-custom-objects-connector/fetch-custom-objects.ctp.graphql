@@ -1,0 +1,19 @@
+query FetchCustomObjects(
+  $container: String!
+  $limit: Int!
+  $offset: Int!
+  $sort: [String!]
+) {
+  customObjects(container: $container, limit: $limit, offset: $offset, sort: $sort) {
+    total
+    count
+    offset
+    results {
+      id
+      container
+      key
+      version
+      lastModifiedAt
+    }
+  }
+}
